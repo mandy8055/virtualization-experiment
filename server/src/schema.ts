@@ -1,0 +1,18 @@
+export const typeDefs = `#graphql
+  type Post {
+    id: ID!
+    title: String!
+    body: String!
+    author: String!
+    createdAt: String!
+  }
+
+  type PostsResult {
+    posts: [Post!]!
+    total: Int!
+  }
+
+  type Query {
+    posts(offset: Int = 0, limit: Int = 20): PostsResult!
+  }
+`;
