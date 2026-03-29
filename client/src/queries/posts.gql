@@ -1,0 +1,12 @@
+query GetPosts($offset: Int, $limit: Int) {
+  posts(offset: $offset, limit: $limit) {
+    total
+    posts {
+      id
+      title
+      body
+      author
+      createdAt
+    }
+  }
+}
