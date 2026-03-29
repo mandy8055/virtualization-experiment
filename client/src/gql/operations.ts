@@ -2,6 +2,7 @@
 /* WARNING: THIS FILE IS GENERATED, DON'T EDIT */
 import { gql } from "@apollo/client";
 import * as Apollo from "@apollo/client";
+import * as ApolloReactHooks from "@apollo/client/react";
 const defaultOptions = {} as const;
 export type GetPostsQueryVariables = Exact<{
   offset: InputMaybe<Scalars["Int"]["input"]>;
@@ -57,54 +58,66 @@ export const GetPostsDocument = gql`
  * });
  */
 export function useGetPostsQuery(
-  baseOptions?: Apollo.QueryHookOptions<GetPostsQuery, GetPostsQueryVariables>,
-) {
-  const options = { ...defaultOptions, ...baseOptions };
-  return Apollo.useQuery<GetPostsQuery, GetPostsQueryVariables>(
-    GetPostsDocument,
-    options,
-  );
-}
-export function useGetPostsLazyQuery(
-  baseOptions?: Apollo.LazyQueryHookOptions<
+  baseOptions?: ApolloReactHooks.QueryHookOptions<
     GetPostsQuery,
     GetPostsQueryVariables
   >,
 ) {
   const options = { ...defaultOptions, ...baseOptions };
-  return Apollo.useLazyQuery<GetPostsQuery, GetPostsQueryVariables>(
+  return ApolloReactHooks.useQuery<GetPostsQuery, GetPostsQueryVariables>(
+    GetPostsDocument,
+    options,
+  );
+}
+export function useGetPostsLazyQuery(
+  baseOptions?: ApolloReactHooks.LazyQueryHookOptions<
+    GetPostsQuery,
+    GetPostsQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return ApolloReactHooks.useLazyQuery<GetPostsQuery, GetPostsQueryVariables>(
     GetPostsDocument,
     options,
   );
 }
 // @ts-ignore
 export function useGetPostsSuspenseQuery(
-  baseOptions?: Apollo.SuspenseQueryHookOptions<
+  baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<
     GetPostsQuery,
     GetPostsQueryVariables
   >,
-): Apollo.UseSuspenseQueryResult<GetPostsQuery, GetPostsQueryVariables>;
+): ApolloReactHooks.UseSuspenseQueryResult<
+  GetPostsQuery,
+  GetPostsQueryVariables
+>;
 export function useGetPostsSuspenseQuery(
   baseOptions?:
-    | Apollo.SkipToken
-    | Apollo.SuspenseQueryHookOptions<GetPostsQuery, GetPostsQueryVariables>,
-): Apollo.UseSuspenseQueryResult<
+    | ApolloReactHooks.SkipToken
+    | ApolloReactHooks.SuspenseQueryHookOptions<
+        GetPostsQuery,
+        GetPostsQueryVariables
+      >,
+): ApolloReactHooks.UseSuspenseQueryResult<
   GetPostsQuery | undefined,
   GetPostsQueryVariables
 >;
 export function useGetPostsSuspenseQuery(
   baseOptions?:
-    | Apollo.SkipToken
-    | Apollo.SuspenseQueryHookOptions<GetPostsQuery, GetPostsQueryVariables>,
+    | ApolloReactHooks.SkipToken
+    | ApolloReactHooks.SuspenseQueryHookOptions<
+        GetPostsQuery,
+        GetPostsQueryVariables
+      >,
 ) {
   const options =
-    baseOptions === Apollo.skipToken
+    baseOptions === ApolloReactHooks.skipToken
       ? baseOptions
       : { ...defaultOptions, ...baseOptions };
-  return Apollo.useSuspenseQuery<GetPostsQuery, GetPostsQueryVariables>(
-    GetPostsDocument,
-    options,
-  );
+  return ApolloReactHooks.useSuspenseQuery<
+    GetPostsQuery,
+    GetPostsQueryVariables
+  >(GetPostsDocument, options);
 }
 export type GetPostsQueryHookResult = ReturnType<typeof useGetPostsQuery>;
 export type GetPostsLazyQueryHookResult = ReturnType<

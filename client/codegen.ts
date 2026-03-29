@@ -31,6 +31,7 @@ const config: CodegenConfig = {
         avoidOptionals: true,
         defaultScalarType: 'unknown',
         baseTypesPath: './types.ts',
+        apolloReactHooksImportFrom: '@apollo/client/react',
       },
     },
   },
