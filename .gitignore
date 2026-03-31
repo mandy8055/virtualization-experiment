@@ -34,3 +34,4 @@ Thumbs.db
 
 # Codegen output (client — we will generate this, not commit it)
 src/gql/
+docs/
